@@ -12,7 +12,7 @@ This repository details the configuration, hardware setup, and testing for estab
    * Controlled and monitored through the **XCTU console**.
 
    <p align="center">
-     <img src="Coordinator.jpg" alt="Coordinator Setup" width="400"/>
+     <img src="XBee/Coordinator.jpg" alt="Coordinator Setup" width="400"/>
    </p>
 
 2. **End Device Node**:
@@ -20,7 +20,7 @@ This repository details the configuration, hardware setup, and testing for estab
    * Connected via jumper wires to an **MSP-ESP430F5529LP** LaunchPad board.
 
    <p align="center">
-     <img src="End_Device.jpg" alt="End Device Setup" width="400"/>
+     <img src="XBee/End_Device.jpg" alt="End Device Setup" width="400"/>
    </p>
 
 ---
@@ -74,6 +74,6 @@ void loop() {
 4. Type messages into the XCTU console log to transmit data wirelessly across the 802.15.4 link.
 
 <p align="center">
-  <img src="XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="600"/><br>
+  <img src="XBee/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="600"/><br>
   <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console</em>
 </p>
