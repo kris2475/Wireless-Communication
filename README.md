@@ -7,7 +7,7 @@ This repository details the configuration, hardware setup, and testing for estab
 ## Hardware Architecture
 
 1. **Coordinator Node**:
-   * **XBee S2C Module** configured as a **Coordinator** (`CE = 1`)[cite: 1].
+   * **XBee S2C Module** configured as a **Coordinator** (`CE = 1`).
    * Mounted on a **Hobbytronics XBee-USB board** and connected to a host computer via USB.
    * Controlled and monitored through the **XCTU console**.
 
@@ -16,7 +16,7 @@ This repository details the configuration, hardware setup, and testing for estab
    </p>
 
 2. **End Device Node**:
-   * **XBee S2C Module** configured as an **End Device** (`CE = 0`)[cite: 1].
+   * **XBee S2C Module** configured as an **End Device** (`CE = 0`).
    * Connected via jumper wires to an **MSP-ESP430F5529LP** LaunchPad board.
 
    <p align="center">
@@ -27,20 +27,20 @@ This repository details the configuration, hardware setup, and testing for estab
 
 ## XBee S2C Configuration (via XCTU)
 
-Both modules were configured using Digi XCTU under the **802.15.4** protocol firmware[cite: 1]:
+Both modules were configured using Digi XCTU under the **802.15.4** protocol firmware:
 
 ### Common Parameters
-* **PAN ID (`ID`)**: `1234`[cite: 1]
-* **Channel (`CH`)**: `C`[cite: 1]
-* **Baud Rate (`BD`)**: `9600`[cite: 1] (or `115200` depending on interface settings)
+* **PAN ID (`ID`)**: `1234`
+* **Channel (`CH`)**: `C`
+* **Baud Rate (`BD`)**: `9600` (or `115200` depending on interface settings)
 
 ### Coordinator Settings
-* **Coordinator Enable (`CE`)**: `Coordinator [1]`[cite: 1]
-* **MAC Mode (`MM`)**: `802.15.4 + MaxStream header no ACKS [3]`[cite: 1]
+* **Coordinator Enable (`CE`)**: `Coordinator [1]`
+* **MAC Mode (`MM`)**: `802.15.4 + MaxStream header no ACKS [3]`
 
 ### End Device Settings
-* **Coordinator Enable (`CE`)**: `End Device [0]`[cite: 1]
-* **MAC Mode (`MM`)**: `802.15.4 + MaxStream header w/ACKS [0]`[cite: 1]
+* **Coordinator Enable (`CE`)**: `End Device [0]`
+* **MAC Mode (`MM`)**: `802.15.4 + MaxStream header w/ACKS [0]`
 
 ---
 1. Connect the Coordinator XBee-USB board to your PC.
