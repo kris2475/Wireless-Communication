@@ -43,6 +43,11 @@ Both modules were configured using Digi XCTU under the **802.15.4** protocol fir
 * **MAC Mode (`MM`)**: `802.15.4 + MaxStream header w/ACKS [0]`[cite: 1]
 
 ---
+<p align="center">
+  <img src="XBee/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="600"/><br>
+  <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console</em>
+</p>
+---
 
 ## MSP430 Firmware
 
