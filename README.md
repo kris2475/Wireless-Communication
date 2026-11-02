@@ -68,3 +68,12 @@ void loop() {
     Serial1.write(inByte0);
   }
 }
+1. Connect the Coordinator XBee-USB board to your PC.
+2. Open **XCTU**, discover the radio module, and launch the **Consoles working mode** terminal.
+3. Ensure the MSP-ESP430F5529LP with the End Device XBee is powered and running.
+4. Type messages into the XCTU console log to transmit data wirelessly across the 802.15.4 link.
+
+<p align="center">
+  <img src="XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="600"/><br>
+  <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console</em>
+</p>
