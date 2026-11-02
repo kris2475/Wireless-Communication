@@ -50,7 +50,7 @@ Both modules were configured using Digi XCTU under the **802.15.4** protocol fir
 
 
 <p align="center">
-  <img src="XBee/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="600"/><br>
+  <img src="XBee/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="800"/><br>
   <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console</em>
 </p>
 ---
