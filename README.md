@@ -1,83 +1,51 @@
-# XBee S2C Wireless Communication with MSP-ESP430F5529LP
+# Wireless Communication Projects Portfolio
 
-This repository details the configuration, hardware setup, and testing for establishing a wireless serial communication link between two **XBee S2C** modules using **Digi XCTU**, an **MSP-ESP430F5529LP** microcontroller board, and a Hobbytronics XBee-USB adapter.
-
----
-
-## Hardware Architecture
-
-1. **Coordinator Node**:
-   * **XBee S2C Module** configured as a **Coordinator** (`CE = 1`).
-   * Mounted on a **Hobbytronics XBee-USB board** and connected to a host computer via USB.
-   * Controlled and monitored through the **XCTU console**.
-
-   <p align="center">
-     <img src="XBee/Coordinator.jpg" alt="Coordinator Setup" width="400"/>
-   </p>
-
-2. **End Device Node**:
-   * **XBee S2C Module** configured as an **End Device** (`CE = 0`).
-   * Connected via jumper wires to an **MSP-ESP430F5529LP** LaunchPad board.
-
-   <p align="center">
-     <img src="XBee/End_Device.jpg" alt="End Device Setup" width="400"/>
-   </p>
+A collection of embedded wireless communication systems featuring multi-module LoRa control dashboards and 802.15.4 Zigbee/XBee serial links.
 
 ---
 
-## XBee S2C Configuration (via XCTU)
+## Projects Overview
 
-Both modules were configured using Digi XCTU under the **802.15.4** protocol firmware:
+1. **ESP32 Dual RYLR896 LoRa Controller & GUI Dashboard**
+   - A dual-module LoRa communication system powered by an ESP32 microcontroller running custom Arduino firmware and managed via a Python/Tkinter desktop dashboard for simultaneous configuration, bidirectional messaging, and live RSSI monitoring.
 
-### Common Parameters
-* **PAN ID (`ID`)**: `1234`
-* **Channel (`CH`)**: `C`
-* **Baud Rate (`BD`)**: `9600` (or `115200` depending on interface settings)
-
-### Coordinator Settings
-* **Coordinator Enable (`CE`)**: `Coordinator [1]`
-* **MAC Mode (`MM`)**: `802.15.4 + MaxStream header no ACKS [3]`
-
-### End Device Settings
-* **Coordinator Enable (`CE`)**: `End Device [0]`
-* **MAC Mode (`MM`)**: `802.15.4 + MaxStream header w/ACKS [0]`
+2. **XBee S2C Wireless Communication with MSP-ESP430F5529LP**
+   - A wireless serial communication link established between XBee S2C modules using Digi XCTU, an MSP-ESP430F5529LP microcontroller board, and a Hobbytronics XBee-USB adapter.
 
 ---
-1. Connect the Coordinator XBee-USB board to your PC.
-2. Open **XCTU**, discover the radio module, and launch the **Consoles working mode** terminal.
-3. Ensure the MSP-ESP430F5529LP with the End Device XBee is powered and running.
-4. Type messages into the XCTU console log to transmit data wirelessly across the 802.15.4 link.
 
+## 1. ESP32 Dual RYLR896 LoRa Controller & GUI Dashboard
 
 <p align="center">
-  <img src="XBee/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="1000"/><br>
-  <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console</em>
+  <img src="./ESP32_Dual_LoRa_Stream/IMG20261103111841.jpg" width="600" alt="ESP32 Dual RYLR896 Hardware Setup">
 </p>
+<p align="center"><em>Figure 1: Complete hardware wiring of the ESP32 breadboard setup connected to dual RYLR896 LoRa modules.</em></p>
+
+### Key Highlights
+- **Microcontroller (ESP32):** Manages two separate hardware serial interfaces (HardwareSerial LoRa1 on UART2 and HardwareSerial LoRa2 on UART1) to interface simultaneously with dual RYLR896 transceiver modules, parsing live AT commands and handling packet forwarding.
+- **Desktop Control Software (Python/Tkinter):** Provides a GUI dashboard featuring a live COM port selector, real-time status indicators, a startup/system debug console, live AT configuration parameter sync, and split-pane messaging consoles with custom color-coded TX/RX logs.
+
 ---
 
-## MSP430 Firmware
+## 2. XBee S2C Wireless Communication with MSP-ESP430F5529LP
 
-The MSP-ESP430F5529LP acts as a serial bridge passing data back and forth between its hardware serial interfaces (`Serial` and `Serial1`):
+<p align="center">
+  <img src="Coordinator.jpg" alt="Coordinator Setup" width="400"/>
+</p>
+<p align="center"><em>Figure 2: Coordinator XBee S2C module mounted on a Hobbytronics XBee-USB board.</em></p>
 
-```cpp
-void setup() {
-  // initialize both serial ports:
-  Serial.begin(9600);
-  Serial1.begin(9600);
-}
+<p align="center">
+  <img src="End_Device.jpg" alt="End Device Setup" width="400"/>
+</p>
+<p align="center"><em>Figure 3: End Device XBee S2C module connected to an MSP-ESP430F5529LP LaunchPad board.</em></p>
 
-void loop() {
-  // read from port 1, send to port 0:
-  if (Serial1.available()) {
-    int inByte1 = Serial1.read();
-    Serial.write(inByte1);
-  }
+### Key Highlights
+- **Hardware Architecture:** Features a Coordinator node connected via a USB adapter to a host computer running Digi XCTU, paired with an End Device node wired to an MSP-ESP430F5529LP LaunchPad board.
+- **802.15.4 Protocol:** Configured with matching PAN IDs and channels using Digi XCTU for reliable wireless serial bridging and packet transmission.
 
-  // read from port 0, send to port 1:
-  if (Serial.available()) {
-    int inByte0 = Serial.read();
-    Serial1.write(inByte0);
-  }
-}
+<p align="center">
+  <img src="XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="1000"/><br>
+  <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console.</em>
+</p>
 
 
