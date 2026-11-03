@@ -51,7 +51,7 @@ A collection of embedded wireless communication systems featuring multi-module L
 
 <p align="center">
   <img src="XBee/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="1000"/><br>
-  <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console.</em>
+  <em>Animation 2: Live demonstration of wireless data transmission using the XCTU console.</em>
 </p>
 
 
