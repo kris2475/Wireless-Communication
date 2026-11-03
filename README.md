@@ -30,12 +30,12 @@ A collection of embedded wireless communication systems featuring multi-module L
 ## 2. XBee S2C Wireless Communication with MSP-ESP430F5529LP
 
 <p align="center">
-  <img src="Coordinator.jpg" alt="Coordinator Setup" width="400"/>
+  <img src="XBee/Coordinator.jpg" alt="Coordinator Setup" width="400"/>
 </p>
 <p align="center"><em>Figure 2: Coordinator XBee S2C module mounted on a Hobbytronics XBee-USB board.</em></p>
 
 <p align="center">
-  <img src="End_Device.jpg" alt="End Device Setup" width="400"/>
+  <img src="XBee/End_Device.jpg" alt="End Device Setup" width="400"/>
 </p>
 <p align="center"><em>Figure 3: End Device XBee S2C module connected to an MSP-ESP430F5529LP LaunchPad board.</em></p>
 
@@ -44,7 +44,7 @@ A collection of embedded wireless communication systems featuring multi-module L
 - **802.15.4 Protocol:** Configured with matching PAN IDs and channels using Digi XCTU for reliable wireless serial bridging and packet transmission.
 
 <p align="center">
-  <img src="XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="1000"/><br>
+  <img src="XBee/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="1000"/><br>
   <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console.</em>
 </p>
 
