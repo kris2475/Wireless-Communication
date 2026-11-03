@@ -23,7 +23,7 @@ A complete, dual-module LoRa communication system powered by an ESP32 microcontr
 ## Software in Action
 
 <p align="center">
-  <img src="./ESP32_Dual_LoRa_Stream/Recording2026-11-03125901-ezgif.com-speed.jpg" width="800" alt="ESP32 Dual RYLR896 Dashboard Animation">
+  <img src="./ESP32_Dual_LoRa_Stream/Recording2026-11-03125901-ezgif.com-speed.gif" width="800" alt="ESP32 Dual RYLR896 Dashboard Animation">
 </p>
 <p align="center"><em>Figure 2: Live demonstration of the Python GUI dashboard controlling communication parameters and exchanging messages between modules.</em></p>
 
