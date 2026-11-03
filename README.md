@@ -21,6 +21,12 @@ A collection of embedded wireless communication systems featuring multi-module L
 </p>
 <p align="center"><em>Figure 1: Complete hardware wiring of the ESP32 breadboard setup connected to dual RYLR896 LoRa modules.</em></p>
 
+
+<p align="center">
+  <img src="LoRa/XBee_Recording1.gif" alt="XCTU Console Operation Animation" width="1000"/><br>
+  <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console.</em>
+</p>
+
 ### Key Highlights
 - **Microcontroller (ESP32):** Manages two separate hardware serial interfaces (HardwareSerial LoRa1 on UART2 and HardwareSerial LoRa2 on UART1) to interface simultaneously with dual RYLR896 transceiver modules, parsing live AT commands and handling packet forwarding.
 - **Desktop Control Software (Python/Tkinter):** Provides a GUI dashboard featuring a live COM port selector, real-time status indicators, a startup/system debug console, live AT configuration parameter sync, and split-pane messaging consoles with custom color-coded TX/RX logs.
