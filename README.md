@@ -23,8 +23,8 @@ A collection of embedded wireless communication systems featuring multi-module L
 
 
 <p align="center">
-  <img src="LoRa/ESP32_Dual_LoRa_Stream/Recording2026-11-03125901-ezgif.com-speed.gif" alt="XCTU Console Operation Animation" width="1000"/><br>
-  <em>Animation 1: Live demonstration of wireless data transmission using the XCTU console.</em>
+  <img src="LoRa/ESP32_Dual_LoRa_Stream/Recording2026-11-03125901-ezgif.com-speed.gif" alt="RYLR896_Dashboard1 Animation" width="1000"/><br>
+  <em>Animation 1: Live demonstration of wireless data transmission RYLR896_Dashboard1.py.</em>
 </p>
 
 ### Key Highlights
